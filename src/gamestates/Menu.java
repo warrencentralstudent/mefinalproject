@@ -66,14 +66,20 @@ public class Menu extends State implements Statemethods {
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO: foreach MenuButton mb  in buttons
-		// TODO: if isIn(e, mb) then if (mb.isMousePressed()) call mb.applyGameState() and break
-		// TODO: call resetButtons()
+		if isIn(e, mb) {
+			if (mb.isMousePressed()) {
+				call mb.applyGameState();
+			}
+		}
+
+		//  break
+		resetButtons();
 
 	}
 
 	private void resetButtons() {
 		// TODO: for each MenuButton mb in buttons
-		// TODO: call mb.resetBools()
+		mb.resetBools();
 	}
 
 	@Override
@@ -88,7 +94,9 @@ public class Menu extends State implements Statemethods {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO: if e.getKeyCode() is equal to KeyEvent.VK_ENTER then set Gamestate.state to GameState.Playing
+		if (e.getKeyCode() == KeyEvent.VK_ENTER){
+			Gamestate.state = Gamestate.PLAYING;
+		}
 	}
 
 	@Override

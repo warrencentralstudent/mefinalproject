@@ -147,7 +147,7 @@ public class Player extends Entity {
     public void loadLvlData(int[][] lvlData) {
         // TODO: set this lvlData to lvlData
         // TODO: if not IsEntityOnFloor(hitbox, lvlData)
-        // TODO: set inAir to true
+        inAir = true;
     }
 
     public void resetDirBooleans() {
@@ -168,11 +168,21 @@ public class Player extends Entity {
     public void setLeft(boolean left) {
         this.left = left;
     }
+    public void setRight(boolean right) {
+        this.right = right;
+    }
+    public void setUp(boolean up) {
+        this.up = up;
+    }
+    public void setDown(boolean down) {
+        this.down = down;
+    }
 
-    // TODO: repeat for Up, Down, Right for previous 2
+
 
 
     public void setJump(boolean jump) {
+        jump();
         // TODO: set this jump to jump.
     }
 

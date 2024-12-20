@@ -8,7 +8,7 @@ import main.GamePanel;
 
 public class KeyboardInputs implements KeyListener {
 
-	private GamePanel gamePanel;
+	private final GamePanel gamePanel;
 
 	public KeyboardInputs(GamePanel gamePanel) {
 		this.gamePanel = gamePanel;
@@ -16,7 +16,6 @@ public class KeyboardInputs implements KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
